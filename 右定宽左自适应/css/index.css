@@ -1,0 +1,48 @@
+.page {
+    max-width: 60em;
+    margin: 0 auto;
+}
+.masthead {
+    position: relative;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border: 1px solid #ccc;
+}
+
+.username {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.main {
+    float: left;
+    width: 100%;
+}
+
+.content-container {
+    margin-right: 212px;
+}
+
+.content {
+    border: 1px solid blue;
+}
+
+.sidebar {
+    float: right;
+    width: 200px;
+    border: 1px solid #ccc;
+    margin-left: -202px;
+}
+
+.footer {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}

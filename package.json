@@ -1,0 +1,30 @@
+{
+  "name": "htmlcss",
+  "version": "1.0.0",
+  "description": "some demo about html and css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadestrong/htmlcss.git"
+  },
+  "keywords": [
+    "html",
+    "css"
+  ],
+  "author": "JadeStrong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jadestrong/htmlcss/issues"
+  },
+  "homepage": "https://github.com/jadestrong/htmlcss#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-size": "^2.1.0"
+  }
+}
