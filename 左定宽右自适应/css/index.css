@@ -1,0 +1,24 @@
+.page {
+    max-width: 60em;
+    margin: 0 auto;
+}
+
+.main {
+    float: right;
+    width: 100%;
+}
+
+.content {
+    background-color: #ccc;
+    margin-left: 210px;
+}
+
+.sidebar {
+    float: left;
+    width: 200px;
+    margin-right: -200px;
+}
+
+.sidebar p {
+    background-color: #aaa;
+}

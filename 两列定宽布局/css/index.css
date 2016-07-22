@@ -1,0 +1,22 @@
+.page {
+    max-width: 60em;
+    margin: 0 auto;
+}
+
+.main {
+    float: left;
+    width: 920px;
+}
+
+.content {
+    background-color: #ccc;
+}
+
+.sidebar {
+    float: right;
+    width: 230px;
+}
+
+.sidebar p {
+    background-color: #aaa;
+}

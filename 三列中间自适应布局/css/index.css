@@ -1,0 +1,33 @@
+.page {
+    max-width: 60em;
+    margin: 0 auto;
+}
+
+.main {
+    float: left;
+    width: 100%;
+    border: 1px solid #000;
+}
+
+.content {
+    background-color: #ccc;
+    margin: 0 210px;
+}
+
+.sidebar-r,.sidebar-l {
+    width: 200px;
+}
+
+.sidebar-l {
+    float: left;
+    margin-right: -202px;
+}
+
+.sidebar-r {
+    float: right;
+    margin-left: -202px;
+}
+
+.sidebar-r p,.sidebar-l p {
+    background-color: #aaa;
+}
