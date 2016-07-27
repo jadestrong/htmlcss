@@ -26,7 +26,12 @@ gulp.task('html',() => {
 		.pipe(reload({stream:true}));
 });
 
-gulp.task('build',['style','script','html'],() => {
+gulp.task('images',() => {
+	return gulp.src('src/img/*')
+		.pipe(gulp.dest('dist/img'));
+});
+
+gulp.task('build',['style','script','html','images'],() => {
 	return gulp.src('dist/**/*')
 		.pipe($.size({title:'build',gzip:true}));
 });

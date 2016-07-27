@@ -1,0 +1,29 @@
+.page {
+    position: relative;
+    max-width: 60em;
+    margin: 0 auto;
+}
+
+.main, .rightside, .leftside, .content{
+    height: 100px;
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+}
+
+.leftside, .rightside {
+    float: right;
+    width: 200px;
+    background-color: #333;
+}
+
+.leftside {
+    margin-left: 10px;
+}
+
+.content {
+    background-color: #ccc;
+    margin-right: 420px;
+}
