@@ -1,0 +1,59 @@
+.page {
+    max-width: 60em;
+    margin: 0 auto;
+}
+#demo {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    background-color: #fff;
+    margin-left: 10px;
+}
+
+#demo::after,#demo::before {
+    position: absolute;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    content: ' ';
+}
+
+#demo::before {
+    border-width: 10px;
+    border-left-color: #000;
+    top: 20px;
+}
+
+#demo::after {
+    border-width: 8px;
+    border-left-color: #fff;
+    top: 22px;
+}
+
+.table {
+    width: 430px;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+.table tr {
+    height: 40px;
+}
+
+.table th, .table td {
+    text-align: left;
+    padding-left: 10px;
+    border: 1px solid #000;
+}
+
+.table th {
+    background-color: #ccc;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.table td {
+}

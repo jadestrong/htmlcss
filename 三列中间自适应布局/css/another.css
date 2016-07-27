@@ -1,0 +1,36 @@
+/**
+ * 之所以使用这种方式，是因为在无样式的时候，也可以保证首先让用户看到的是主要内容区，
+ * 而且，在移动端当屏幕太小时，是不会应用浮动等布局的，而是先根据文档流来显示内容，
+ * 之后根据媒体查询等方式来分别应用样式。
+ */
+main,div {
+    height: 100px;
+}
+
+.container {
+    position: relative;   
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+}
+
+.leftside {
+    float: left;
+    width: 200px;
+    background-color: #ccc;
+    margin-right: -200px;
+}
+
+.rightside {
+    float: right;
+    width: 200px;
+    background-color: #ccc;
+    margin-left: -200px;
+}
+
+.content {
+    margin: 0 210px;
+    background-color: #000;
+}
