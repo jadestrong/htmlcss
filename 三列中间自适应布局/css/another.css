@@ -4,11 +4,11 @@
  * 之后根据媒体查询等方式来分别应用样式。
  */
 main,div {
-    height: 100px;
+    height: 200px;
 }
 
 .container {
-    position: relative;   
+    position: relative;
 }
 
 .main {
@@ -32,5 +32,5 @@ main,div {
 
 .content {
     margin: 0 210px;
-    background-color: #000;
+    background-color: #ccc;
 }

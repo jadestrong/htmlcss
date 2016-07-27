@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>三列中间自适应之自适应区域在文档流中领先版</title>
+    <title>三列中间自适应之自适应区域在文档流中领先版---有BUG</title>
     <link rel="stylesheet" href="./css/reset.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="./css/another.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
     <div class="container clearfix">
         <main class="main">
-            <div class="content"></div>
+            <div class="content">
+                <p>使用这种方式，在布局中使用了绝对定位，虽然没有让它移动，但是却使得
+                该元素脱离文档流，而float的虽然也会脱离文档流，其后的元素为当其不存在，
+                但是却不会影响文本的显示，文本会包围在浮动元素的周围，而绝对定位就存是
+                覆盖了，所以这种方式虽然可以布局，但是左右两侧的元素却被main元素覆盖在
+                下面了，所以文本、链接等都不能被选中！！！</p>
+            </div>
         </main>
-        <div class="leftside"></div>
-        <div class="rightside"></div>
+        <div class="leftside">这里的文本不能被选中</div>
+        <div class="rightside"><a href="#">这个链接也不能被点击</a></div>
     </div>
 </body>
 </html>
