@@ -1,0 +1,62 @@
+.page {
+    width: 60em;
+    margin: 0 auto;
+}
+
+.masthead {
+    height: 35px;
+    line-height: 35px;
+    padding: 1px 0 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.masthead li {
+    margin-top: -1px;
+}
+
+.masthead .more, .masthead ul {
+    float: right;
+}
+
+.masthead ul li {
+    float: left;
+}
+
+.masthead li a, .masthead li a:hover{
+    color: #666;
+}
+
+.masthead li a {
+    display: block;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    border-right: 0;
+    border-radius: 5px 5px 0 0;
+    padding: 0 15px;
+    text-align: center;
+    font-size: 14px;
+    background: #f8f8f8;
+}
+
+.masthead li a:hover {
+    background: #fff;
+}
+
+.masthead ul li:last-child {
+    border-right: 1px solid #ddd;
+}
+
+.masthead li.current a {
+    cursor: default;
+    background-color: #fff;
+    padding-bottom: 1px;
+    margin-bottom: -1px;
+}
+
+.masthead .more {
+    margin: 0 10px;
+}
+
+.more a {
+    color: #666;
+}

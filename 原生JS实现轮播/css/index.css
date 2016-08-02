@@ -1,0 +1,48 @@
+.page {
+    width: 60em;
+    margin: 0 auto;
+}
+
+.wrap {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.pic {
+    float: left;
+    width: 1200px;
+}
+
+.pic>div {
+    float: left;
+    width: 400px;
+    height: 200px;
+    background: #5dd94e;
+}
+
+#position {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    background: #000;
+    opacity: 0.4;
+    width: 400px;
+    text-align: right;
+}
+
+#position li {
+    width: 10px;
+    height: 10px;
+    margin: 0 2px;
+    display: inline-block;
+    -webkit-border-radius:5px;
+    border-radius: 5px;
+    background-color: #AFAFAF;
+}
+
+#position li.cur {
+    background-color: #ff0000;
+}

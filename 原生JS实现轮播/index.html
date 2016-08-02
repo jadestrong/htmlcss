@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS轮播</title>
+    <link rel="stylesheet" href="./css/reset.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./css/index.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+    <div class="page">
+        <div class="wrap">
+            <div class="pic">
+                <div><a href="#"><img src="./img/girl.jpg" alt=""></a></div>
+                <div><a href="#"><img src="./img/3.jpg" alt=""></a></div>
+                <div><a href="#"><img src="./img/p5.jpg" alt=""></a></div>
+            </div>
+            <ul id="position">
+                <li class="cur"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            var picWrap = document.querySelector('.pic');
+            var pics = picWrap.getElementsByTagName('div');
+            var picLen = pics.length;
+            var position = document.getElementById('position');
+            var pos = position.getElementsByTagName('li');
+            var cur = document.querySelector('.cur');
+            var nextIndex = 0;
+            setInterval(function () {
+                var curIndex = nextIndex;
+                nextIndex < picLen-1 ? nextIndex++ : nextIndex = 0;
+                // pics[curIndex].style['margin-left'] = '-400px';
+                goTo(curIndex);
+            },3000);
+            position.addEventListener('click',function (event) {
+                var target = event.target;
+                var index = Array.prototype.indexOf.call(pos,target);
+                if (index < 0) {
+                    return;
+                }
+                goTo(index);
+                nextIndex = ++index == picLen ? 0 : index;
+                console.log(nextIndex);
+            },false);
+
+            function goTo(index) {
+                picWrap.style['margin-left'] = index * (-400) + 'px';
+                cur.className = '';
+                pos[index].className = 'cur';
+            }
+        };
+    </script>
+</body>
+</html>

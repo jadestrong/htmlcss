@@ -1,0 +1,76 @@
+.page {
+    width: 60em;
+    margin: 0 auto;
+}
+/**
+ * 此处使用行高 = 高度，来使内部文字垂直居中，但是这种方法对于多行不好看;
+ * 这里还留了1px的上内边距，这个是为了抵消下面的margin-top:-1px;而设置的。
+ * 这样留出来的那一条缝就会被统一上移的li元素所盖住，而不出出现超出父元素的问题
+ * 考虑很周到---一旦设置了负边距就需要相应的抵消它，通过内边距。
+ */
+.masthead {
+    height: 35px;
+    line-height: 35px;
+    padding: 1px 0 0;
+    border-bottom: 1px solid #ddd; //head栏下面的统一的一条线
+}
+
+.masthead ul, .masthead li {
+    float: left; //容器、条目右浮动，容器不浮动的就得为其清除浮动了
+}
+
+/**
+ * 后面紧跟的这两条是为了实现缝隙；
+ * 注意：这里margin-top：-1px;非常有用，否则稍后会盖住header的那一条下边框，导致所有的
+ * tab标签下面都没有了边框。而我们想要的是选中的那个才没有边框
+ */
+.masthead li {
+    margin: -1px 0 0 2px;//左外边距2px，使得tab之间隔开条缝，top = -1px上移1px，
+    //好像上边距会默认存在1px,如果不上移的话，会留下一条缝
+}
+
+.masthead li:first-child {
+    margin-left: 0; //第一个tab的左边不需要留下2px的外边距
+}
+
+.masthead li a, .masthead li a:hover {
+    text-decoration: none;
+    color: #666;
+}
+/**
+ * 将a元素设置了块级元素，不然显示太难看
+ */
+.masthead li a {
+    display: block;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    font-size: 14px;
+    background: #f8f8f8;
+}
+
+.masthead li a:hover {
+    background: #fff;
+}
+/**
+ * 这里使用padding-bottom来使的元素向下扩充一点，来遮盖住header的统一下边线
+ * 然后再用margin-bottom的负值使后面的元素可以上移来抵消padding所带来的影响
+ * very good！！！
+ */
+.masthead li.current a {
+    padding-bottom: 1px;
+    margin-bottom: -1px;
+    background: #fff;
+    cursor: default;
+}
+
+.masthead .more {
+    float: right;
+    margin-right: 10px;
+}
+
+.masthead .more a {
+    text-decoration: none;
+}
