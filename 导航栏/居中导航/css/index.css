@@ -1,0 +1,95 @@
+.page {
+    width: 60em;
+    margin: 10px auto;
+}
+/**
+ * 可以使得内部元素都垂直居中，注意是内部的内容可以垂直居中，
+ * 首先是最外层的这个容器，可以让里面的所有东西都居中，相应的其会影响到内面的所有元素。
+ * 对于其a这一层也会影响，但是设置a这一层就能够撑开父元素，所以二者作用相同；
+ * 最后是corner，只需要对其应用height就好，因为它只需要显示背景，行高没啥用
+ */
+.nav-main,.nav-main li a,.nav-main .corner {
+    height: 40px;
+    line-height: 40px;
+}
+/**
+ * 只有三个地方需要用到该背景图片，所以在这里统一设定，no-repeat -9999px -9999px可以
+ * 使得该图片不起作用，等待后面分别指定
+ */
+.nav-main, .nav-main li, .nav-main .corner {
+    background: url('../img/nav.png') no-repeat -9999px -9999px;
+}
+/**
+ * 这里设置的text-align为center，可以将内部的元素进行居中
+ * background-position是移动的图片，比如0 0 就是不用动，元素设置的多大就会显示多
+ * 大的图片，如果图片够大的话。
+ *
+ * font-size: 0;是为了消除display: inline-block;之前默认存在的空格
+ */
+.nav-main {
+    position: relative;
+    margin: 0 6px;
+    text-align: center;
+    font-size: 0;
+    letter-spacing: -0.307em;
+    *letter-spacing: normal;
+    *word-spacing: -1px;
+    color: #fff;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+}
+/**
+ * 使用inline-block更加方便将内部元素水平排列，而不必使用float，还得清除浮动
+ * 难道对li使用inline-block，还得对再里面的a也使用？？
+ */
+.nav-main li, .nav-main li a {
+    display: inline-block;
+    *display: inline;
+    *zoom: 0;
+}
+/**
+ * 在左面留下1px的内边距，用于放背景图片即那一行白色分割线
+ * 只定位图片，没有repeat，所以只有一道
+ * 而这里background-position：0 -150px;就是水平不动，图片上移150px
+ */
+.nav-main li {
+    padding: 0 0 0 1px;
+    font-size: 14px;
+    letter-spacing: normal;
+    word-spacing: normal;
+    background-position: 0 -150px;
+}
+
+.nav-main li:first-child {
+    background: none;
+}
+
+.nav-main li a, .nav-main li a:hover {
+    color: #fff;
+}
+
+.nav-main li a {
+    padding: 0 20px;
+    font-weight: bold;
+}
+/**
+ * 对于这个span因为里面没有内容，所以必须显示地设置高度才能
+ * 显示出来背景图片，width更是必须地，因为这些脱离文档流的
+ * 元素默认宽高都是1个字节吧。
+ */
+.nav-main .corner {
+    position: absolute;
+    top: 0;
+    width: 6px;
+    overflow: hidden;
+}
+
+.nav-main .corner-l {
+    left: -6px;
+    background-position: 0 -50px;
+}
+
+.nav-main .corner-r {
+    left: 100%;
+    background-position: 0 -100px;
+}
