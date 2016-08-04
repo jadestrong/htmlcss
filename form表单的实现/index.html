@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form表单</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="page">
+        <div class="m-form">
+            <form class="" action="#" method="post">
+                <fieldset>
+                    <legend>欢迎注册账户</legend>
+                    <div class="form-item">
+                        <label class="lab" for="">账号：</label>
+                        <div class="ipt">
+                            <input type="text" name="name" value="" class="u-ipt">
+                            <span class="domain">@163.com</span>
+                            <p>
+                                6~8个字符，包括字母、数字、下划线，以字母开头，字母或数字结尾
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="lab" for="">初始密码：</label>
+                        <div class="ipt">
+                            <input type="password" name="psw" value="" class="u-ipt">
+                            <p>
+                                6~8个字符，区分大小写
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="lab" for="">确认密码：</label>
+                        <div class="ipt">
+                            <input type="password" name="psw-confirm" value="" class="u-ipt">
+                            <p>
+                                再次输入密码
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="lab" for="">验证码：</label>
+                        <div class="ipt">
+                            <input type="text" class="u-ipt u-ipt-error">
+                            <img src="./img/confirm.jpg" alt="验证码">
+                            <a href="#">换一张</a>
+                            <p class="tip">
+                                <input type="checkbox" id="agree" value="">
+                                <label for="agree">同意“服务条款”和“隐私权保护和个人信息利用政策”</label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-item form-item-l">
+                        <button type="button" name="button">立即注册</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

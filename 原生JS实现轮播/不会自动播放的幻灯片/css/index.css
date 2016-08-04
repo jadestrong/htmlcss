@@ -6,7 +6,7 @@
     position: relative;
     width: 400px;
     height: 250px;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 .slide ol, .slide ol li {
     position: absolute;
@@ -56,4 +56,25 @@
 
 .slide .position li.current-pos {
     background-color: #ff0000;
+}
+
+/**
+ * 左移变化规律是100% —> 0 -> -100%
+ * 统一的都向左方移动一个包含块的宽度，
+ * 能达到连接起来的效果，而且还会叠加透明度
+ * 的渐变效果
+ */
+.slide-x ol li{
+    left: -100%;
+}
+
+.slide-x li.current-pic {
+    left: 0;
+}
+/**
+ * ~ CSS3选择器：选择前面是有li.current-pic
+ * 的每个li元素
+ */
+.slide-x li.current-pic ~ li {
+    left: 100%;
 }
