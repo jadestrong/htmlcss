@@ -2,7 +2,9 @@
     width: 60em;
     margin: 0 auto;
 }
-
+/**
+ * 这个是通用的，设置relative就是为了后面绝对定位
+ */
 .wrap {
     position: relative;
     width: 400px;

@@ -1,0 +1,59 @@
+.page {
+    width: 60em;
+    margin: 0 auto;
+}
+.slide {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    /*overflow: hidden;*/
+}
+.slide ol, .slide ol li {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+}
+.slide ol li {
+    opacity: 0;
+    -webkit-transition: 0.5s ease-out;
+    -moz-transition: 0.5s ease-out;
+    -ms-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+    -webkit-transition-property: opacity, left, top;
+    -moz-transition-property: opacity, left, top;
+    -ms-transition-property: opacity, left, top;
+    transition-property: opacity, left, top;
+}
+
+.slide ol li.current-pic {
+    z-index: 21;
+    opacity: 1;
+}
+
+.slide .position {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #000;
+    z-index: 50;
+    opacity: 0.4;
+    text-align: right;
+}
+
+.slide .position li {
+    width: 10px;
+    height: 10px;
+    margin: 0 2px;
+    display: inline-block;
+    background-color: #afafaf;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.slide .position li.current-pos {
+    background-color: #ff0000;
+}
