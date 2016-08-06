@@ -1,0 +1,33 @@
+body {
+    font-size: 100%;
+}
+div,header,main,nav,article,section,footer,p,body,ul,ol,h2 {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+fieldset {
+    border: 0;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}

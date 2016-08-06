@@ -10,6 +10,10 @@ table {
     border-spacing: 0;
 }
 
+th {
+    text-align: left;
+}
+
 .m-table {
     table-layout: fixed;
     width: 100%;
@@ -22,10 +26,6 @@ table {
 .m-table th, .m-table td {
     padding: 10px;
     border: 1px solid #ddd;
-}
-
-.m-table th {
-    font-weight: bold;
 }
 
 .m-table tbody tr:nth-child(2n) {

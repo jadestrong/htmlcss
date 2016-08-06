@@ -26,7 +26,7 @@
  */
 .masthead li {
     margin: -1px 0 0 2px;//左外边距2px，使得tab之间隔开条缝，top = -1px上移1px，
-    //好像上边距会默认存在1px,如果不上移的话，会留下一条缝
+    //好像上边距会默认存在1px,如果不上移的话，会留下一条缝?这个是因为上面我们设置了1px的padding
 }
 
 .masthead li:first-child {
