@@ -1,0 +1,42 @@
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.u-upload {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.u-upload button {
+    height: 32px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    font-size: 14px;
+    color: #666;
+    background: #ddd;
+}
+/**
+ * 当使用right及bottom设置偏移量时，设置的是元素的右下角
+ * 相对于包含块的偏移量，所以当设置负值时，会超出包含块相应的
+ * 大小。
+ */
+.u-upload input {
+    position: absolute;
+    top: 0;
+    right: -1px;
+    cursor: pointer;
+    opacity: 0;
+    font-size: 100px;
+    filter: alpha(opacity=0);
+}
+
+.u-upload:hover button {
+    border-color: #bbb;
+    color: #333;
+    background: #ccc;
+}
