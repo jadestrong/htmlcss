@@ -92,7 +92,10 @@ img {
     max-width: 960px;
     margin: 0 auto;
 }
-
+/**
+ * 对于所有的图片都设置的max-width: 100%;
+ * 这样不会让图片放大
+ */
 .post-photo,
 .post-photo-full,
 .about img,
@@ -123,17 +126,24 @@ img {
     margin-top: 0;
     padding: .45em 0 .5em;
 }
-
+/**
+ * 对主导航下的每一个a设置统一的样式
+ */
 .nav-main a {
     color: #292929;
     font-size: 1.125em;
 }
-
+/**
+ * 然后单独处理hover样式
+ * @type {[type]}
+ */
 .nav-main a:hover {
     color: #029443;
     text-decoration: none;
 }
-
+/**
+ * 最后对选中的链接做特殊处理
+ */
 .nav-main .current-page,
 .nav-main .current-page:hover {
     color: #747474;
@@ -221,6 +231,7 @@ main > .post:first-child > h1 {
 
 .about {
     background: #2b2b2b;
+    border-radius: 10px;
     padding: .313em .625em .625em;
 }
 
@@ -236,12 +247,50 @@ main > .post:first-child > h1 {
 
 .about img {
     border: 5px solid #bebebe;
+    border-radius: 15px;
     display: block;
     margin: 0 auto;
 }
 
 .map {
     margin: 1.438em 0 0.813em;
+}
+
+.travels {
+    position: relative;
+}
+/**
+ *  + 表示是相邻元素选择器，仅选择相邻的
+ * @type {[type]}
+ */
+.map:focus + .cities,
+.map:hover + .cities {
+    left: 50%;
+}
+
+.cities {
+    position: absolute;
+    top: -75px;
+    left: -999em;
+    width: 222px;
+    margin-left: -111px;
+    padding: .5em 0 .9375em .9375em;
+    background: #2b2b2b;
+    border-radius: 5px 5px;
+    color: #fff;
+}
+
+.cities::after {
+    position: absolute;
+    top: 99.9%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    content: ' ';
+    border: solid transparent;
+    border-top-color: #2b2b2b;
+    border-width: 15px;
+    margin-left: -15px;
 }
 
 .links {
@@ -386,7 +435,9 @@ footer[role="contentinfo"] {
         background: url(../img/bg.png) repeat-y 65.938% 0;
         padding-bottom: 1.9375em;
     }
-
+    /**
+     * 这里对整个核心内容区进行浮动并设定宽度
+     */
     main {
         float: left;
         width: 62.5%;
@@ -413,7 +464,9 @@ footer[role="contentinfo"] {
     .pagination {
         margin-top: 45px;
     }
-
+    /**
+     * 侧边栏右浮，这是个两列定宽布局
+     */
     .sidebar {
         float: right;
         margin-top: 1.875em;

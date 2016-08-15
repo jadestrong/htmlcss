@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pure CSS3 Slide</title>
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/slider.css">
+</head>
+
+<body>
+    <header>
+        <h2>Pure CSS3 Slider</h2>
+        <a href="https://www.script-tutorials.com/pure-css3-slider/" class="stuts">
+            Back to original tutorial on <span>Script Tutorials</span>
+        </a>
+        <div class="container">
+            <div class="slider">
+                <span id="root"></span>
+                <span id="parent1"></span>
+                <span id="parent2"></span>
+                <span id="parent3"></span>
+                <span id="child1"></span>
+                <span id="child2"></span>
+                <span id="subchild1"></span>
+                <div id="tabs">
+                    <dl>
+                        <dd>
+                            <a href="#parent1" class="fwd">Parent #1</a>
+                            <a href="#parent2" class="fwd">Parent #2</a>
+                            <a href="#parent3" class="fwd">Parent #3</a>
+                        </dd>
+                    </dl>
+                    <dl class="parent1">
+                        <dd>
+                            <a href="#child1" class="fwd">Child #1#1</a>
+                            <a href="#child2" class="fwd">Child #1#2</a>
+                            <a href="#">Child #1#3</a>
+                            <a href="#">Child #1#4</a>
+                            <a href="#">Child #1#5</a>
+                        </dd>
+                        <dd><a href="#root">Back</a></dd>
+                    </dl>
+                    <dl class="parent2">
+                        <dd>
+                            <a href="#">Child #2#1</a>
+                            <a href="#">Child #2#2</a>
+                            <a href="#">Child #2#3</a>
+                            <a href="#">Child #2#4</a>
+                            <a href="#">Child #2#5</a>
+                        </dd>
+                        <dd><a href="#root">Back</a></dd>
+                    </dl>
+                    <dl class="parent3">
+                        <dd>
+                            <a href="#">Child #3#1</a>
+                            <a href="#">Child #3#2</a>
+                            <a href="#">Child #3#3</a>
+                            <a href="#">Child #3#4</a>
+                            <a href="#">Child #3#5</a>
+                        </dd>
+                        <dd><a href="#root">Back</a></dd>
+                    </dl>
+                    <dl class="child1">
+                        <dd>
+                            <a class="fwd" href="#subchild1">SubChild #1#1</a>
+                            <a href="#">SubChild #1#2</a>
+                            <a href="#">SubChild #1#3</a>
+                            <a href="#">SubChild #1#4</a>
+                            <a href="#">SubChild #1#5</a>
+                        </dd>
+                        <dd><a href="#parent1">Back</a></dd>
+                    </dl>
+                    <dl class="child2">
+                        <dd>
+                            <a href="#">SubChild #2#1</a>
+                            <a href="#">SubChild #2#2</a>
+                            <a href="#">SubChild #2#3</a>
+                            <a href="#">SubChild #2#4</a>
+                            <a href="#">SubChild #2#5</a>
+                        </dd>
+                        <dd><a href="#parent1">Back</a></dd>
+                    </dl>
+                    <dl class="subchild1">
+                        <dd>
+                            <a href="#">Links #1</a>
+                            <a href="#">Links #2</a>
+                            <a href="#">Links #3</a>
+                        </dd>
+                        <dd><a href="#child1">Back</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>

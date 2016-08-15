@@ -1,0 +1,103 @@
+.slider {
+    position: relative;
+    width: 200px;
+    margin: 150px auto;
+    padding: 10px;
+    border: 1px solid #000;
+    background: #FFF;
+    overflow: hidden;
+}
+
+.slider span {
+    display: none;
+}
+
+#tabs {
+    background: #fff;
+    margin-left: 0;
+    overflow: hidden;
+    width: 2000px;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+#tabs dl {
+    float: left;
+    height: 300px;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    position: relative;
+    width: 200px;
+}
+
+#tabs dl:first-child {
+    opacity: 1;
+}
+
+#tabs dl dd a.fwd {
+    background-color: #c8ceff;
+}
+
+#tabs dl dd a {
+    display: block;
+    margin: 10px;
+    line-height: 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    background-color: #f4f5fe;
+    border-radius: 10px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.4) inset, 0px 0px 0px 4px rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+#tabs dl dd:first-child {
+    height: 250px;
+    overflow: auto;
+    border: 5px;
+}
+
+#tabs dl dd a:hover {
+    box-shadow:0px 0px 4px rgba(0,0,0,0.5) inset, 0px 0px 0px 4px rgba(51,51,204,0.5);
+}
+
+#root:target ~ #tabs {
+    margin-left: 0;
+}
+
+#parent1:target ~ #tabs {
+    margin-left: -200px;
+}
+
+#parent2:target ~ #tabs {
+    margin-left: -400px;
+}
+
+#parent3:target ~ #tabs {
+    margin-left: -600px;
+}
+
+#child1:target ~ #tabs {
+    margin-left: -800px;
+}
+
+#child2:target ~ #tabs {
+    margin-left: -1000px;
+}
+
+#subchild1:target ~ #tabs {
+    margin-left: -1200px;
+}
+
+#parent1:target ~ #tabs .parent1,
+#parent2:target ~ #tabs .parent2,
+#parent3:target ~ #tabs .parent3,
+#child1:target ~ #tabs .child1,
+#child2:target ~ #tabs .child2,
+#subchild1:target ~ #tabs .subchild1 {
+    opacity: 1;
+}
