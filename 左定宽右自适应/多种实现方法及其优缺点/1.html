@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1</title>
+    <style>
+        div,p {
+            margin: 0;
+            padding: 0;
+        }
+        .parent {
+            max-width: 60em;
+            margin: 0 auto;
+        }
+        .left {
+            float: left;
+            width: 200px;
+            background-color: #ccc;
+        }
+        .right {
+            margin-left: 210px;
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="left">
+            <p>left</p>
+        </div>
+        <div class="right">
+            <p>right</p>
+            <p>缺点：在IE6下由于一列是浮动而另一列未浮动，所以存在兼容性问题，未浮动的元素中的内容，
+            会向左偏移几像素。可以设置浮动的元素的margin为：-200px。</p>
+            <p>另外，当在.right的元素上应用清除浮动时会导致内容下降，不与左列浮动元素平行的问题，
+                在所有的浏览器中都有这个问题，这并不是bug。</p>
+            <p>鉴于以上两点，虽然在某些情况下会出问题，但因为简单使用的场景还是很多的。</p>
+        </div>
+    </div>
+</body>
+</html>

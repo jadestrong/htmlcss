@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2</title>
+    <style>
+        div,p {
+            margin: 0;
+            padding: 0;
+        }
+        .left {
+            float: left;
+            width: 200px;
+            background-color: #666;
+        }
+        .right-fix {
+            float: right;
+            width: 100%;
+            margin-left: -200px;
+        }
+        .right {
+            margin-left: 210px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="left">
+            <p>left</p>
+        </div>
+        <div class="right-fix">
+            <div class="right">
+                <p>right</p>
+                <p>该方法兼容极好，在任何浏览器下都能正常工作。只是元素稍多。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

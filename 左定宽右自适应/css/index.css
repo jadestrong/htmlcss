@@ -12,13 +12,14 @@
     background-color: #ccc;
     margin-left: 210px;
 }
-
+/*这里设置浮动和负的margin是为了兼容性*/
 .sidebar {
     float: left;
     width: 200px;
     margin-right: -200px;
-}
-
-.sidebar p {
     background-color: #aaa;
 }
+
+
+.sidebar p {
+ }

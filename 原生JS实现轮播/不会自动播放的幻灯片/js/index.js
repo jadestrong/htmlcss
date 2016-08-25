@@ -2,6 +2,7 @@
     each(_slides,function (_slide,i) {
         var _ctrls = _slide.querySelector('.position').getElementsByTagName('li');
         var _lists = _slide.querySelector('.pictures').getElementsByTagName('li');
+        var curIndex = 0;
         each(_ctrls,function (_ctrl,i) {
             /**
              * 这里要做的思路是一致的，首先删除当前显示的元素的指定类，然后为下一个添加样式
@@ -11,17 +12,36 @@
              * @return {[type]} [description]
              */
             _ctrl.onclick = function () {
-                each(_ctrls,function (_ctrl,i) {
-                    delClass(_ctrl,'current-pos');
-                });
-                each(_lists,function (_list,i) {
-                    delClass(_list,'current-pic');
-                });
-                addClass(_ctrls[i],'current-pos');
-                addClass(_lists[i],'current-pic');
+                curIndex = i;
+                // each(_ctrls,function (_ctrl,i) {
+                //     delClass(_ctrl,'current-pos');
+                // });
+                // each(_lists,function (_list,i) {
+                //     delClass(_list,'current-pic');
+                // });
+                // addClass(_ctrls[i],'current-pos');
+                // addClass(_lists[i],'current-pic');
+                goTo(i, _ctrls, _lists)
             };
         });
+        setInterval(function () {
+            var picLen = _lists.length;
+            curIndex = curIndex < picLen - 1 ? curIndex + 1 : 0;
+            goTo(curIndex, _ctrls, _lists);
+        },2000);
     });
+
+    function goTo(index, _ctrls, _lists) {
+        each(_ctrls,function (_ctrl,index) {
+            delClass(_ctrl,'current-pos');
+        });
+        each(_lists,function (_list,index) {
+            delClass(_list,'current-pic');
+        });
+        addClass(_ctrls[index],'current-pos');
+        addClass(_lists[index],'current-pic');
+    }
+
     /**
      * 检测指定类是否存在，注意两边都加空字符串，方便匹配
      * @param  {[type]}  _object  [description]
@@ -67,7 +87,7 @@
         var _clsname = _clsname.replace('.','');
         if (hasClass(_object,_clsname)) {
             var reg = new RegExp('(?:^|\\s)' + _clsname + '(?=\\s|$)','g');
-            _object.className = toClass(_object.className.replace(reg,' '))
+            _object.className = toClass(_object.className.replace(reg,' '));
         }
     }
     /**
